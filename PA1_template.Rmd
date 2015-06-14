@@ -1,5 +1,13 @@
-# title: "Reproducible Research: Peer Assessment 1"
+---
+title: "Reproducible Research: Peer Assessment 1"
+output:
+        html_document:
+        keep_md: true
+---
 
+```{r setoptions, echo = TRUE}
+knitr::opts_chunk$set(fig.width=12,fig.height=8,fig.path='Figs/',echo = TRUE)
+```
 
 ## Loading and preprocessing the data
 1. Load the data
@@ -89,7 +97,7 @@ for (i in 1:nrow(activityNew)){
 ```
 
 ```{r calculate new total steps per day}
-totalStepsNew<-aggregate(steps ~ date, data=activityNew, sum, na.rm=TRUE)
+totalStepsNew<-aggregate(steps ~ date, data=activityNew, sum)
 head(totalStepsNew)
 ```
 
