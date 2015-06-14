@@ -6,7 +6,8 @@ output:
 ---
 
 ```{r setoptions, echo = TRUE}
-knitr::opts_chunk$set(fig.width=12,fig.height=8,fig.path='Figs/',echo = TRUE)
+library(knitr)
+opts_chunk$set(fig.width=8,fig.height=6,echo=TRUE,cache=TRUE,cache.path="cache/",fig.path="Figs/")
 ```
 
 ## Loading and preprocessing the data
